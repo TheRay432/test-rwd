@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::before,
 ::after {
@@ -7,5 +8,297 @@
           box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+}
+
+html {
+  font-size: 70%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 2rem;
+}
+
+#th_id,
+#th_date,
+#th_source,
+#th_data {
+  width: 100px;
+}
+
+#th_business,
+#th_mount,
+#th_progress {
+  width: 60px;
+}
+
+#th_time {
+  width: 115px;
+}
+
+#th_product_name {
+  width: 165px;
+}
+
+#th_status {
+  width: 80px;
+}
+
+#th_lion_business,
+#th_money {
+  width: 70px;
+}
+
+#th_arrears {
+  width: 110px;
+}
+
+table {
+  border-spacing: 0;
+  margin-bottom: 2rem;
+  margin: 1rem auto;
+}
+
+.tableHead {
+  background-color: black;
+}
+
+.tableHead th {
+  padding: 1rem 0;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+.tableHead th:nth-child(1) {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.tableHead th:nth-last-child(1) {
+  border-radius: 0px 3px 3px 0px;
+}
+
+tr td {
+  border-bottom: 1px solid #c0bdbd;
+  text-align: center;
+  padding: 1rem 0;
+  height: 100%;
+}
+
+.lightBlue {
+  color: #71d2f5;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 0 15px gray;
+          box-shadow: 0 0 15px gray;
+  border-radius: 5px;
+}
+
+.illustrate {
+  border-bottom: 1.5px dashed gray;
+}
+
+p.illustrate {
+  display: inline-block;
+  border-bottom: 1.5px dashed gray;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.btn_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.btn_container button {
+  margin: 0.5rem 1rem;
+  color: red;
+  border: 1.5px solid red;
+  background-color: transparent;
+  padding: 5px 5px;
+  border-radius: 5px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.btn_container button:hover {
+  background-color: red;
+  color: white;
+}
+
+.btn_disable {
+  margin: 0.5 1rem;
+  width: 68px;
+  color: gray;
+  border: 1.5px solid gray;
+  background-color: transparent;
+  padding: 5px 5px;
+  border-radius: 5px;
+  cursor: not-allowed;
+}
+
+.haveBeen {
+  color: gray;
+  max-width: 70px;
+  font-size: 12px;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+}
+
+.yellow {
+  max-width: 70px;
+  color: #ed8a0a;
+  font-size: 12px;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+}
+
+.cancelOrder {
+  color: gray;
+}
+
+.cancelOrder td {
+  /* padding: 2rem 0; */
+}
+
+.cancelOrder td.cancelTD {
+  text-align: left;
+}
+
+.cancelOrder td.black {
+  color: black;
+}
+
+@media only screen and (max-width: 1190px) {
+  table,
+  tbody,
+  thead,
+  tbody,
+  th,
+  tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+  td {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  thead tr {
+    display: none;
+  }
+  tr {
+    border: 1px solid #ccc;
+    margin-top: 1rem;
+  }
+  tr td {
+    border: none;
+  }
+  /*
+		Label the data
+		*/
+  td:nth-of-type(1):before {
+    content: "訂單編號";
+    color: black;
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(2):before {
+    content: "下單日期";
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(3):before {
+    content: "單別/來源";
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(4):before {
+    content: "同業業務";
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(5):before {
+    content: "出發日期";
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(6):before {
+    content: "產品名稱";
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(7):before {
+    content: "數量";
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(8):before {
+    content: "狀況";
+    width: 48px;
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(9):before {
+    content: "證照進度";
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(10):before {
+    content: "雄獅業務";
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(11):before {
+    content: "行前資料";
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(12):before {
+    content: "總金額";
+    text-align: right;
+    margin: 0 3.5rem;
+  }
+  td:nth-of-type(13):before {
+    content: "尚欠款";
+    text-align: right;
+    margin: 0 3.5rem;
+  }
 }
 /*# sourceMappingURL=all.css.map */
