@@ -10,15 +10,10 @@
   text-decoration: none;
 }
 
-html {
-  font-size: 70%;
-}
-
 body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 2rem;
 }
 
 #th_id,
@@ -85,6 +80,10 @@ tr td {
   text-align: center;
   padding: 1rem 0;
   height: 100%;
+}
+
+.h {
+  height: 127px;
 }
 
 .lightBlue {
@@ -194,23 +193,20 @@ p.illustrate {
 }
 
 @media only screen and (max-width: 1190px) {
+  html {
+    font-size: 12px;
+  }
   table,
   tbody,
   thead,
   tbody,
   th,
   tr {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    width: 100%;
+    /*  display: flex;
+    flex-direction: column;
+    justify-content: flex-start; */
+    display: block;
+    width: 95vw;
   }
   td {
     display: -webkit-box;
@@ -220,15 +216,96 @@ p.illustrate {
         -ms-flex-align: baseline;
             align-items: baseline;
   }
+  td.noFlex {
+    display: inline-block;
+    white-space: nowrap;
+    /*  &.lt {
+      width: calc(100% - 150px);
+      margin-left: 2px;
+      text-align: left;
+    } */
+  }
+  td.noFlex.m {
+    width: calc(100% - 150px);
+    white-space: nowrap;
+    text-align: left;
+  }
   thead tr {
     display: none;
   }
   tr {
     border: 1px solid #ccc;
     margin-top: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
   }
   tr td {
     border: none;
+    padding: 15px 0 3px 5px;
+  }
+  tr td p.lightBlue::after {
+    content: "/";
+    color: black;
+  }
+  tr td div.test {
+    text-align: left;
+  }
+  tr td.colorB {
+    color: black;
+  }
+  .h {
+    height: auto;
+  }
+  .people {
+    display: inline-block;
+    width: 24px;
+    text-align: left;
+  }
+  .moneyP {
+    display: inline-block;
+    text-align: left;
+  }
+  .moneyDiv {
+    display: inline-block;
+  }
+  .noFlex .btn_disable {
+    margin: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .shadow {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0px;
+  }
+  .m-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .outside-btnContainer {
+    width: 100%;
+  }
+  .btn_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    padding: 0 16px;
+  }
+  .btn_container button {
+    width: 50%;
   }
   /*
 		Label the data
@@ -237,68 +314,90 @@ p.illustrate {
     content: "訂單編號";
     color: black;
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 1rem;
   }
   td:nth-of-type(2):before {
     content: "下單日期";
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 1rem;
   }
   td:nth-of-type(3):before {
     content: "單別/來源";
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 1rem;
   }
   td:nth-of-type(4):before {
     content: "同業業務";
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 1rem;
   }
   td:nth-of-type(5):before {
     content: "出發日期";
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 1rem;
   }
   td:nth-of-type(6):before {
     content: "產品名稱";
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 1rem;
   }
   td:nth-of-type(7):before {
-    content: "數量";
+    content: "人數";
+    display: inline-block;
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 1rem;
   }
   td:nth-of-type(8):before {
     content: "狀況";
-    width: 48px;
-    text-align: right;
-    margin: 0 3.5rem;
+    display: inline-block;
+    text-align: left;
+    margin: 0 1rem;
   }
   td:nth-of-type(9):before {
     content: "證照進度";
+    display: inline-block;
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 1rem;
   }
   td:nth-of-type(10):before {
     content: "雄獅業務";
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 1rem;
   }
   td:nth-of-type(11):before {
     content: "行前資料";
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 1rem;
   }
   td:nth-of-type(12):before {
     content: "總金額";
+    display: inline-block;
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 1rem;
   }
   td:nth-of-type(13):before {
     content: "尚欠款";
+    display: inline-block;
     text-align: right;
-    margin: 0 3.5rem;
+    width: 52px;
+    margin: 0 0 0 1rem;
+  }
+  td.ttt:nth-of-type(1):before {
+    color: gray;
+  }
+  td.ttt:nth-of-type(11):before {
+    color: gray;
   }
 }
 /*# sourceMappingURL=all.css.map */
